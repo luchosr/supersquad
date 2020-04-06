@@ -1,6 +1,6 @@
 import React from "react";
-import "./App.css";
 import CharacterList from "../CharacterList";
+import "../../styles/index.css";
 
 function App() {
   return (
