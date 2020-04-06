@@ -8,7 +8,6 @@ import rootReducer from "./reducers";
 import { addCharacterById } from "./actions";
 
 const store = createStore(rootReducer);
-console.log("store.getState() es ", store.getState());
 store.subscribe(() => console.log("store ", store.getState()));
 store.dispatch(addCharacterById(2));
 
