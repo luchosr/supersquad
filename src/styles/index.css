@@ -12,11 +12,6 @@ body {
   opacity: 0.8;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
 .App {
   text-align: center;
   padding: 5%;
