@@ -1,20 +1,21 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./components/app/App";
-import { createStore } from "redux";
-import { Provider } from "react-redux";
-import rootReducer from "./reducers";
-import { addCharacterById } from "./actions";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './components/App';
+
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+
+import rootReducer from './reducers';
+import { addCharacterById } from './actions';
 
 const store = createStore(rootReducer);
-store.subscribe(() => console.log("store ", store.getState()));
+console.log('store.getState()', store.getState());
+store.subscribe(() => console.log('store', store.getState()));
 store.dispatch(addCharacterById(2));
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </React.StrictMode>,
-  document.getElementById("root")
+  <Provider store={store}>
+    <App />
+  </Provider>
+  , document.getElementById('root')
 );
